@@ -1,0 +1,50 @@
+<!doctype html>
+<html ng-app="jayamekar" ng-csp ng-controller="RootCtrl as root">
+
+<head>
+    <meta charset="utf-8">
+    <title>Jaya Mekar</title>
+
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/normalize-css/normalize.css" />
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="bower_components/angular/angular-csp.css" />
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/yk-sidebar.css"/>
+    <!-- endbuild -->
+</head>
+
+<body yk-window>
+    <yk-navbar brand="root.brand" fixed-top>
+        <yk-menu-list menu="root.menuNavLeft" nav></yk-menu-list>
+        <yk-menu-list menu="root.menuNavRight" nav right></yk-menu-list>
+    </yk-navbar>
+
+    <div ui-view></div>
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/metisMenu/src/metisMenu.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js scripts/index.js -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/value/appValue.js"></script>
+    <script src="scripts/controller/appCtrl.js"></script>
+    <script src="scripts/directive/appDirective.js"></script>
+    <!-- endbuild -->
+</body>
+
+</html>

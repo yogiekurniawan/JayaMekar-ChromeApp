@@ -1,0 +1,10 @@
+{
+    "appName": {
+        "message": "Jaya Mekar",
+        "description": "The name of the application"
+    },
+    "appDescription": {
+        "message": "Sistem Informasi Penggajian",
+        "description": "The description of the application"
+    }
+}

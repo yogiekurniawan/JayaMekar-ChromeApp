@@ -29,7 +29,7 @@ angular.module('jayamekar', [
             })
             .state('jabatan', {
                 url: '/jabatan',
-                templateUrl: 'views/jabatan/jabatan.html',
+                templateUrl: 'views/jabatan.html',
                 controller: 'JabatanCtrl as jabatan'
             })
             .state('karyawan', {

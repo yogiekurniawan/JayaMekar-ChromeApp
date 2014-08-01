@@ -17,4 +17,9 @@ angular.module('appCtrl', [])
     this.toggleSidebar = function() {
         this.withSidebar = !this.withSidebar;
     };
+})
+
+// JabatanCtrl as jabatan
+.controller('JabatanCtrl', function () {
+	// body...
 });

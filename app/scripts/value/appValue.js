@@ -12,6 +12,10 @@ angular.module('appValue', [])
     menu: 'Home',
     ngClass: 'fa fa-home'
 }, {
+    href: 'jabatan',
+    menu: 'Jabatan',
+    ngClass: ''
+}, {
     href: 'eksperimen',
     menu: 'Eksperimen',
     ngClassD: 'caret',

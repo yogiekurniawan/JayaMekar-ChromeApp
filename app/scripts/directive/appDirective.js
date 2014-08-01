@@ -22,6 +22,12 @@ angular.module('appDirective', [])
 // http://microblog.anthonyestebe.com/2013-11-30/window-resize-event-with-angular/
 
 .directive('ykNavbar', function() {
+
+    function ykNavbarLinkFn(scope, element, attrs) {
+        if (angular.isDefined(attrs.fixedTop)) element.addClass('navbar-fixed-top');
+        if (angular.isDefined(attrs.fixedBottom)) element.addClass('navbar-fixed-bottom');
+    }
+
     return {
         templateUrl: 'template/navbar/yk-navbar.html',
         restrict: 'E',
@@ -36,14 +42,19 @@ angular.module('appDirective', [])
                 listMenu.push(menu);
             };
         },
-        link: function ykNavbarLinkFn(scope, element, attrs) {
-            if (angular.isDefined(attrs.fixedTop)) element.addClass('navbar-fixed-top');
-            if (angular.isDefined(attrs.fixedBottom)) element.addClass('navbar-fixed-bottom');
-        }
+        link: ykNavbarLinkFn
     };
 })
 
 .directive('ykMenuList', function() {
+
+    function ykMenuListLinkFn(scope, element, attrs, ykNavbarCtrl) {
+        if (angular.isDefined(attrs.nav)) element.addClass("navbar-nav");
+        if (angular.isDefined(attrs.right)) element.addClass("navbar-right");
+
+        // ykNavbarCtrl.menu(scope.menu);
+    }
+
     return {
         templateUrl: 'template/menu/yk-menu-list.html',
         restrict: 'E',
@@ -52,29 +63,26 @@ angular.module('appDirective', [])
         },
         replace: true,
         require: '^ykNavbar',
-        link: function(scope, element, attrs, ykNavbarCtrl) {
-            if (angular.isDefined(attrs.nav)) element.addClass("navbar-nav");
-            if (angular.isDefined(attrs.right)) element.addClass("navbar-right");
-
-            // ykNavbarCtrl.menu(scope.menu);
-        }
+        link: ykMenuListLinkFn
     };
 })
 
 .directive('ykSidebar', function() {
+
+    function ykSidebarLinkFn(scope, element, attrs) {
+
+        // menjalankan mentis menu untuk sidebar
+        // membutuhkan src : jquery.js, bootstrap.js, mentisMenu.js
+        $(function() {
+            $('#side-menu').metisMenu();
+        });
+    }
+
     return {
         templateUrl: 'template/sidebar/yk-sidebar.html',
         restrict: 'E',
         replace: true,
-        link: function(scope, element, attrs) {
-
-            // menjalankan mentis menu untuk sidebar
-            // membutuhkan src : jquery.js, bootstrap.js, mentisMenu.js
-            $(function() {
-                $('#side-menu').metisMenu();
-            });
-
-        }
+        link: ykSidebarLinkFn
     };
 })
 

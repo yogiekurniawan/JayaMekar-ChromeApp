@@ -91,10 +91,15 @@ angular.module('jayamekar', [
                 templateUrl: 'views/template.html',
                 controller: 'TemplateCtrl as template'
             })
-            .state('template.tables', {
-                url: '/tables',
-                templateUrl: 'views/template/tables.html',
-                controller: 'TablesCtrl as tables'
+            .state('template.simple-tables', {
+                url: '/simple-tables',
+                templateUrl: 'views/template/simple-tables.html',
+                controller: 'SimpleTablesCtrl as simpleTables'
+            })
+            .state('template.data-tables', {
+                url: '/simple-tables',
+                templateUrl: 'views/template/data-tables.html',
+                controller: 'DataTablesCtrl as dataTables'
             });
     }
 ]);

@@ -35,7 +35,12 @@ angular.module('appCtrl', [])
     };
 })
 
-// TablesCtrl as tables
-.controller('TablesCtrl', function() {
+// SimpleTablesCtrl as simpleTables
+.controller('SimpleTablesCtrl', function() {
+
+})
+
+// DataTablesCtrl as dataTables
+.controller('SimpleTablesCtrl', function() {
 
 });

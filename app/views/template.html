@@ -1,7 +1,18 @@
 <yk-wrapper yk-toggle-sidebar="template.withSidebar" window-width="{{windowWidth}}">
     <yk-sidebar filter="template.filter">
         <li>
-            <a ui-sref="template.tables"><i class="fa fa-dashboard fa-fw"></i> Tables</a>
+            <a href="#"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+        </li>
+        <li>
+            <a href="#"><i class="fa fa-dashboard fa-fw"></i> Tables<span class="fa arrow"></span></a>
+            <ul class="nav nav-second-level">
+                <li>
+                    <a ui-sref="template.simple-tables"> Simple Tables</a>
+                </li>
+                <li class="last-child">
+                    <a ui-sref="template.data-tables"> Data Tables</a>
+                </li>
+            </ul>
         </li>
         <li>
             <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Menu 2<span class="fa arrow"></span></a>
@@ -48,15 +59,21 @@
         </li>
     </yk-sidebar>
     <yk-wrapper-content>
-        
-        <div class="header">
-            <div class="page-header">
-                <button class="btn btn-sm" ng-click="template.toggleSidebar()">Toggle Sidebar</button>
-                <h4>Judul Halaman - {{windowHeight}} - {{windowWidth}} - {{template.withSidebar}} - {{template.filter}}</h4>
-            </div>
-            <!-- / .yk-header -->
-        </div>
-        <h1>Area Content template</h1>
+
+        <section class="content-header">
+            <h1>
+                Simple Tables
+                <small>preview of simple tables</small>
+            </h1>
+            <ol class="breadcrumb">
+                <li><a href="#"><i class="fa fa-dashboard"></i> Home</a>
+                </li>
+                <li><a href="#">Tables</a>
+                </li>
+                <li class="active">Simple</li>
+            </ol>
+        </section>
+
         <ui-view></ui-view>
 
     </yk-wrapper-content>

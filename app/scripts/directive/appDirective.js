@@ -129,10 +129,21 @@ angular.module('appDirective', [])
 .directive('ykWrapperContent', function(){
 
     return {
-        scope: {},
         restrict: 'E',
         templateUrl: 'template/wrapper/yk-wrapper-content.html',
         replace: true,
         transclude: true,
+        scope: {},
+    };
+})
+
+.directive('ykBox', function(){
+
+    return {
+        restrict: 'E',
+        templateUrl: 'template/box/yk-box.html',
+        replace: true,
+        transclude: true,
+        scope: {},
     };
 });

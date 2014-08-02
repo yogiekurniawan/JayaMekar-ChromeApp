@@ -1,46 +1,8 @@
 <div class="wrapper-body">
-        <div class="wrapper-inner">
-            <!-- S:Content -->
-            <div class="content">
-                <div class="header">
-                    <div class="page-header">
-                        <button class="btn btn-sm" ng-click="home.toggleSidebar()">Toggle Sidebar</button>
-                        <h4>Judul Halaman - {{windowHeight}} - {{windowWidth}} - {{home.withSidebar}}</h4>
-                    </div>
-                    <!-- / .yk-header -->
-                </div>
-                <!-- / .header -->
-                <div class="row">
-                    <div class="col-sm-12">
-                        <table class="table table-bordered">
-                            <thead>
-                                <tr>
-                                    <th class="col-sm-1">#</th>
-                                    <th class="col-sm-2">Column</th>
-                                    <th class="col-sm-2">Column</th>
-                                    <th class="col-sm-2">Column</th>
-                                    <th class="col-sm-2">Column</th>
-                                    <th class="col-sm-2">Column</th>
-                                    <th class="col-sm-1">Aksi</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr ng-repeat="i in ['row1','row2','row3','row4','row5','row6','row7','row8','row9','row10']">
-                                    <td class="col-sm-1">{{i}}</td>
-                                    <td class="col-sm-2">{{i}}</td>
-                                    <td class="col-sm-2">{{i}}</td>
-                                    <td class="col-sm-2">{{i}}</td>
-                                    <td class="col-sm-2">{{i}}</td>
-                                    <td class="col-sm-2">{{i}}</td>
-                                    <td class="col-sm-1">{{i}}</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <!-- / .col-sm-12 -->
-                </div>
-                <!-- / .row -->
-            </div>
-            <!-- / .content -->
+    <div class="wrapper-inner">
+        <!-- S:Content -->
+        <div class="content" ng-transclude>
         </div>
+        <!-- / .content -->
     </div>
+</div>

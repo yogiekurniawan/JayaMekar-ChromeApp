@@ -20,6 +20,9 @@ angular.module('appCtrl', [])
 })
 
 // JabatanCtrl as jabatan
-.controller('JabatanCtrl', function () {
-	// body...
+.controller('JabatanCtrl', function() {
+    this.withSidebar = true;
+    this.toggleSidebar = function() {
+        this.withSidebar = !this.withSidebar;
+    };
 });

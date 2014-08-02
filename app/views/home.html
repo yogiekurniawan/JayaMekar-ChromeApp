@@ -1,49 +1,62 @@
-<div class="wrapper with-sidebar with-search" yk-toggle-sidebar="home.withSidebar" window-width="{{windowWidth}}">
-    <yk-sidebar></yk-sidebar>
-    <div class="wrapper-body">
-        <div class="wrapper-inner">
-            <!-- S:Content -->
-            <div class="content">
-                <div class="header">
-                    <div class="page-header">
-                        <button class="btn btn-sm" ng-click="home.toggleSidebar()">Toggle Sidebar</button>
-                        <h4>Judul Halaman - {{windowHeight}} - {{windowWidth}} - {{home.withSidebar}}</h4>
-                    </div>
-                    <!-- / .yk-header -->
-                </div>
-                <!-- / .header -->
-                <div class="row">
-                    <div class="col-sm-12">
-                        <table class="table table-bordered">
-                            <thead>
-                                <tr>
-                                    <th class="col-sm-1">#</th>
-                                    <th class="col-sm-2">Column</th>
-                                    <th class="col-sm-2">Column</th>
-                                    <th class="col-sm-2">Column</th>
-                                    <th class="col-sm-2">Column</th>
-                                    <th class="col-sm-2">Column</th>
-                                    <th class="col-sm-1">Aksi</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr ng-repeat="i in ['row1','row2','row3','row4','row5','row6','row7','row8','row9','row10']">
-                                    <td class="col-sm-1">{{i}}</td>
-                                    <td class="col-sm-2">{{i}}</td>
-                                    <td class="col-sm-2">{{i}}</td>
-                                    <td class="col-sm-2">{{i}}</td>
-                                    <td class="col-sm-2">{{i}}</td>
-                                    <td class="col-sm-2">{{i}}</td>
-                                    <td class="col-sm-1">{{i}}</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <!-- / .col-sm-12 -->
-                </div>
-                <!-- / .row -->
+<yk-wrapper yk-toggle-sidebar="home.withSidebar" window-width="{{windowWidth}}">
+    <yk-sidebar filter="home.filter">
+        <li>
+            <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Menu 1</a>
+        </li>
+        <li>
+            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Menu 2<span class="fa arrow"></span></a>
+            <ul class="nav nav-second-level">
+                <li>
+                    <a href=""> Menu 2.1</a>
+                </li>
+                <li class="last-child">
+                    <a href="#"> Menu 2.2</a>
+                </li>
+            </ul>
+            <!-- / .nav-second-level -->
+        </li>
+
+        <li>
+            <a href="#"><i class="fa fa-sitemap"></i> Menu 3<span class="fa arrow"></span></a>
+            <ul class="nav nav-second-level">
+                <li>
+                    <a href="#"> Menu 3.1</a>
+                </li>
+                <li>
+                    <a href="#"> Menu 3.2</a>
+                </li>
+                <li class="last-child">
+                    <a href="#"> Menu 3.3 <span class="fa arrow"></span></a>
+                    <ul class="nav nav-third-level">
+                        <li>
+                            <a href="#"> Menu 3.3.1</a>
+                        </li>
+                        <li>
+                            <a href="#"> Menu 3.3.2</a>
+                        </li>
+                        <li>
+                            <a href="#"> Menu 3.3.3</a>
+                        </li>
+                        <li class="last-child">
+                            <a href="#"> Menu 3.3.4</a>
+                        </li>
+                    </ul>
+                    <!-- / .nav-third-level -->
+                </li>
+            </ul>
+            <!-- / .nav-second-level -->
+        </li>
+    </yk-sidebar>
+    <yk-wrapper-content>
+
+        <div class="header">
+            <div class="page-header">
+                <button class="btn btn-sm" ng-click="home.toggleSidebar()">Toggle Sidebar</button>
+                <h4>Judul Halaman - {{windowHeight}} - {{windowWidth}} - {{home.withSidebar}} - {{home.filter}}</h4>
             </div>
-            <!-- / .content -->
+            <!-- / .yk-header -->
         </div>
-    </div>
-</div>
+        <h1>Area Content home</h1>
+
+    </yk-wrapper-content>
+</yk-wrapper>

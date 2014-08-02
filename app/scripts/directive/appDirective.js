@@ -82,6 +82,10 @@ angular.module('appDirective', [])
         templateUrl: 'template/sidebar/yk-sidebar.html',
         restrict: 'E',
         replace: true,
+        transclude: true,
+        scope: {
+            filter: "="
+        },
         link: ykSidebarLinkFn
     };
 })

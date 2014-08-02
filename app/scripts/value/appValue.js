@@ -8,7 +8,7 @@ angular.module('appValue', [])
 })
 
 .value('menuNavLeftVal', [{
-    href: 'main',
+    href: 'home',
     menu: 'Home',
     ngClass: 'fa fa-home'
 }, {

@@ -17,4 +17,30 @@ angular.module('appCtrl', [])
     this.toggleSidebar = function() {
         this.withSidebar = !this.withSidebar;
     };
+})
+
+// JabatanCtrl as jabatan
+.controller('JabatanCtrl', function() {
+    this.withSidebar = true;
+    this.toggleSidebar = function() {
+        this.withSidebar = !this.withSidebar;
+    };
+})
+
+// TemplateCtrl as template
+.controller('TemplateCtrl', function() {
+    this.withSidebar = true;
+    this.toggleSidebar = function() {
+        this.withSidebar = !this.withSidebar;
+    };
+})
+
+// SimpleTablesCtrl as simpleTables
+.controller('SimpleTablesCtrl', function() {
+
+})
+
+// DataTablesCtrl as dataTables
+.controller('SimpleTablesCtrl', function() {
+
 });

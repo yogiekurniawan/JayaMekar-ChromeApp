@@ -8,9 +8,17 @@ angular.module('appValue', [])
 })
 
 .value('menuNavLeftVal', [{
-    href: 'main',
+    href: 'home',
     menu: 'Home',
     ngClass: 'fa fa-home'
+}, {
+    href: 'jabatan',
+    menu: 'Jabatan',
+    ngClass: ''
+}, {
+    href: 'template',
+    menu: 'Template',
+    ngClass: ''
 }, {
     href: 'eksperimen',
     menu: 'Eksperimen',

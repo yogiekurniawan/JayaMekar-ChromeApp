@@ -82,13 +82,17 @@ angular.module('appDirective', [])
         templateUrl: 'template/sidebar/yk-sidebar.html',
         restrict: 'E',
         replace: true,
+        transclude: true,
+        scope: {
+            filter: "="
+        },
         link: ykSidebarLinkFn
     };
 })
 
-.directive('ykToggleSidebar', function() {
+.directive('ykWrapper', function() {
 
-    function ykToggleSidebarLink(scope, element, attrs) {
+    function ykWrapperLink(scope, element, attrs) {
 
         // binding perubahan ukuran window
         attrs.$observe('windowWidth', function(newValue) {
@@ -111,10 +115,35 @@ angular.module('appDirective', [])
     }
 
     return {
-        restrict: 'A',
+        restrict: 'E',
+        templateUrl: 'template/wrapper/yk-wrapper.html',
+        transclude: true,
+        replace: true,
         scope: {
             ykToggleSidebar: '='
         },
-        link: ykToggleSidebarLink
+        link: ykWrapperLink
+    };
+})
+
+.directive('ykWrapperContent', function(){
+
+    return {
+        restrict: 'E',
+        templateUrl: 'template/wrapper/yk-wrapper-content.html',
+        replace: true,
+        transclude: true,
+        scope: {},
+    };
+})
+
+.directive('ykBox', function(){
+
+    return {
+        restrict: 'E',
+        templateUrl: 'template/box/yk-box.html',
+        replace: true,
+        transclude: true,
+        scope: {},
     };
 });

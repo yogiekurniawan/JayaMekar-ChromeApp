@@ -29,7 +29,7 @@ angular.module('jayamekar', [
             })
             .state('jabatan', {
                 url: '/jabatan',
-                templateUrl: 'views/jabatan/jabatan.html',
+                templateUrl: 'views/jabatan.html',
                 controller: 'JabatanCtrl as jabatan'
             })
             .state('karyawan', {
@@ -85,6 +85,21 @@ angular.module('jayamekar', [
                 url: '/about-app',
                 templateUrl: 'views/about-app.html',
                 controller: 'AboutAppCtrl'
+            })
+            .state('template', {
+                url: '/template',
+                templateUrl: 'views/template.html',
+                controller: 'TemplateCtrl as template'
+            })
+            .state('template.simple-tables', {
+                url: '/simple-tables',
+                templateUrl: 'views/template/simple-tables.html',
+                controller: 'SimpleTablesCtrl as simpleTables'
+            })
+            .state('template.data-tables', {
+                url: '/simple-tables',
+                templateUrl: 'views/template/data-tables.html',
+                controller: 'DataTablesCtrl as dataTables'
             });
     }
 ]);

@@ -1,0 +1,63 @@
+<yk-wrapper yk-toggle-sidebar="template.withSidebar" window-width="{{windowWidth}}">
+    <yk-sidebar filter="template.filter">
+        <li>
+            <a ui-sref="template.tables"><i class="fa fa-dashboard fa-fw"></i> Tables</a>
+        </li>
+        <li>
+            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Menu 2<span class="fa arrow"></span></a>
+            <ul class="nav nav-second-level">
+                <li>
+                    <a href=""> Menu 2.1</a>
+                </li>
+                <li class="last-child">
+                    <a href="#"> Menu 2.2</a>
+                </li>
+            </ul>
+            <!-- / .nav-second-level -->
+        </li>
+
+        <li>
+            <a href="#"><i class="fa fa-sitemap"></i> Menu 3<span class="fa arrow"></span></a>
+            <ul class="nav nav-second-level">
+                <li>
+                    <a href="#"> Menu 3.1</a>
+                </li>
+                <li>
+                    <a href="#"> Menu 3.2</a>
+                </li>
+                <li class="last-child">
+                    <a href="#"> Menu 3.3 <span class="fa arrow"></span></a>
+                    <ul class="nav nav-third-level">
+                        <li>
+                            <a href="#"> Menu 3.3.1</a>
+                        </li>
+                        <li>
+                            <a href="#"> Menu 3.3.2</a>
+                        </li>
+                        <li>
+                            <a href="#"> Menu 3.3.3</a>
+                        </li>
+                        <li class="last-child">
+                            <a href="#"> Menu 3.3.4</a>
+                        </li>
+                    </ul>
+                    <!-- / .nav-third-level -->
+                </li>
+            </ul>
+            <!-- / .nav-second-level -->
+        </li>
+    </yk-sidebar>
+    <yk-wrapper-content>
+        
+        <div class="header">
+            <div class="page-header">
+                <button class="btn btn-sm" ng-click="template.toggleSidebar()">Toggle Sidebar</button>
+                <h4>Judul Halaman - {{windowHeight}} - {{windowWidth}} - {{template.withSidebar}} - {{template.filter}}</h4>
+            </div>
+            <!-- / .yk-header -->
+        </div>
+        <h1>Area Content template</h1>
+        <ui-view></ui-view>
+
+    </yk-wrapper-content>
+</yk-wrapper>

@@ -85,6 +85,16 @@ angular.module('jayamekar', [
                 url: '/about-app',
                 templateUrl: 'views/about-app.html',
                 controller: 'AboutAppCtrl'
+            })
+            .state('template', {
+                url: '/template',
+                templateUrl: 'views/template.html',
+                controller: 'TemplateCtrl as template'
+            })
+            .state('template.tables', {
+                url: '/tables',
+                templateUrl: 'views/template/tables.html',
+                controller: 'TablesCtrl as tables'
             });
     }
 ]);

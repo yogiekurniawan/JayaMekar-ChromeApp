@@ -25,4 +25,17 @@ angular.module('appCtrl', [])
     this.toggleSidebar = function() {
         this.withSidebar = !this.withSidebar;
     };
+})
+
+// TemplateCtrl as template
+.controller('TemplateCtrl', function() {
+    this.withSidebar = true;
+    this.toggleSidebar = function() {
+        this.withSidebar = !this.withSidebar;
+    };
+})
+
+// TablesCtrl as tables
+.controller('TablesCtrl', function() {
+
 });

@@ -16,6 +16,10 @@ angular.module('appValue', [])
     menu: 'Jabatan',
     ngClass: ''
 }, {
+    href: 'template',
+    menu: 'Template',
+    ngClass: ''
+}, {
     href: 'eksperimen',
     menu: 'Eksperimen',
     ngClassD: 'caret',
